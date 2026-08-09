@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chatterbox TTS | Internship Demo</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">C</div>
+
+            <div>
+                <h1>Chatterbox</h1>
+                <span>TTS Demo</span>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <p class="section-label">WORKSPACE</p>
+
+            <button class="nav-item active" data-section="overview">
+                <span>⌂</span>
+                Overview
+            </button>
+
+            <button class="nav-item" data-section="tasks">
+                <span>✓</span>
+                Internship Tasks
+            </button>
+
+            <button class="nav-item" data-section="docker">
+                <span>▣</span>
+                Docker
+            </button>
+
+            <button class="nav-item" data-section="architecture">
+                <span>◇</span>
+                Architecture
+            </button>
+        </div>
+
+        <div class="sidebar-bottom">
+
+            <div class="docker-mini-status">
+                <div class="status-dot"></div>
+
+                <div>
+                    <strong>Docker Ready</strong>
+                    <span>Container environment</span>
+                </div>
+            </div>
+
+            <div class="version">
+                Frontend v1.0.0
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main -->
+    <main class="main">
+
+        <!-- Topbar -->
+        <header class="topbar">
+
+            <div>
+                <span class="breadcrumb">Internship / Engineering</span>
+                <h2>Chatterbox TTS Demo</h2>
+            </div>
+
+            <div class="topbar-actions">
+
+                <div class="live-status">
+                    <span class="pulse"></span>
+                    Dockerized
+                </div>
+
+                <button class="icon-button" id="themeButton">
+                    ◐
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- Overview -->
+        <section class="page-section active" id="overview">
+
+            <div class="hero">
+
+                <div class="hero-content">
+
+                    <span class="eyebrow">
+                        FIRST DAY INTERNSHIP TASK
+                    </span>
+
+                    <h1>
+                        Build. Dockerize.<br>
+                        <span>Understand.</span>
+                    </h1>
+
+                    <p>
+                        A frontend demonstration for learning the fundamentals
+                        of Chatterbox Text-to-Speech and containerizing a web
+                        application with Docker.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <button class="primary-button" id="demoButton">
+                            Run Frontend Demo
+                            <span>→</span>
+                        </button>
+
+                        <button class="secondary-button" id="dockerButton">
+                            View Docker Setup
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-visual">
+
+                    <div class="orb orb-one"></div>
+                    <div class="orb orb-two"></div>
+
+                    <div class="voice-card">
+
+                        <div class="voice-header">
+                            <span>VOICE ENGINE</span>
+
+                            <div class="mini-status">
+                                <span></span>
+                                READY
+                            </div>
+                        </div>
+
+                        <div class="waveform" id="waveform">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                        <div class="voice-text">
+                            Chatterbox TTS
+                        </div>
+
+                        <div class="voice-meta">
+                            <span>Text → Speech</span>
+                            <span>Frontend Demo</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Stats -->
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <div class="stat-icon purple">⌘</div>
+
+                    <div>
+                        <span>Frontend</span>
+                        <strong>Complete</strong>
+                    </div>
+
+                    <div class="check">✓</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon blue">▣</div>
+
+                    <div>
+                        <span>Docker Image</span>
+                        <strong>Built</strong>
+                    </div>
+
+                    <div class="check">✓</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon green">●</div>
+
+                    <div>
+                        <span>Container</span>
+                        <strong>Running</strong>
+                    </div>
+
+                    <div class="check">✓</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon orange">80</div>
+
+                    <div>
+                        <span>Container Port</span>
+                        <strong>80 → 3000</strong>
+                    </div>
+
+                    <div class="check">✓</div>
+                </div>
+
+            </div>
+
+
+            <!-- Current task -->
+            <div class="content-grid">
+
+                <div class="panel task-panel">
+
+                    <div class="panel-header">
+                        <div>
+                            <span class="panel-label">CURRENT TASK</span>
+                            <h3>Dockerize the TTS Frontend</h3>
+                        </div>
+
+                        <span class="progress-label">80%</span>
+                    </div>
+
+                    <div class="progress-track">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                    <div class="task-list">
+
+                        <label class="task-row completed">
+                            <input type="checkbox" checked>
+                            <span class="custom-checkbox">✓</span>
+
+                            <div>
+                                <strong>Create frontend</strong>
+                                <small>HTML, CSS and JavaScript</small>
+                            </div>
+
+                            <span class="task-state">DONE</span>
+                        </label>
+
+                        <label class="task-row completed">
+                            <input type="checkbox" checked>
+                            <span class="custom-checkbox">✓</span>
+
+                            <div>
+                                <strong>Create Dockerfile</strong>
+                                <small>Nginx Alpine base image</small>
+                            </div>
+
+                            <span class="task-state">DONE</span>
+                        </label>
+
+                        <label class="task-row completed">
+                            <input type="checkbox" checked>
+                            <span class="custom-checkbox">✓</span>
+
+                            <div>
+                                <strong>Build Docker image</strong>
+                                <small>chatterbox-frontend:latest</small>
+                            </div>
+
+                            <span class="task-state">DONE</span>
+                        </label>
+
+                        <label class="task-row completed">
+                            <input type="checkbox" checked>
+                            <span class="custom-checkbox">✓</span>
+
+                            <div>
+                                <strong>Run container</strong>
+                                <small>localhost:3000 → container:80</small>
+                            </div>
+
+                            <span class="task-state">DONE</span>
+                        </label>
+
+                        <label class="task-row">
+                            <input type="checkbox">
+                            <span class="custom-checkbox"></span>
+
+                            <div>
+                                <strong>Connect TTS backend</strong>
+                                <small>Future integration</small>
+                            </div>
+
+                            <span class="task-state pending">NEXT</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="panel terminal-panel">
+
+                    <div class="panel-header terminal-header">
+
+                        <div>
+                            <span class="panel-label">DOCKER TERMINAL</span>
+                            <h3>Container Monitor</h3>
+                        </div>
+
+                        <div class="terminal-dots">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                    </div>
+
+                    <div class="terminal">
+
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            docker ps
+                        </div>
+
+                        <div class="terminal-line muted">
+                            CONTAINER ID
+                        </div>
+
+                        <div class="terminal-container">
+
+                            <span class="terminal-green">
+                                ●
+                            </span>
+
+                            <div>
+                                <strong>chatterbox-frontend</strong>
+                                <small>nginx:alpine</small>
+                            </div>
+
+                            <span class="terminal-running">
+                                UP
+                            </span>
+
+                        </div>
+
+                        <div class="terminal-info">
+                            <span>PORT</span>
+                            <strong>3000 → 80</strong>
+                        </div>
+
+                        <div class="terminal-info">
+                            <span>STATUS</span>
+                            <strong class="terminal-green">RUNNING</strong>
+                        </div>
+
+                        <div class="terminal-cursor">
+                            $
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Tasks -->
+        <section class="page-section" id="tasks">
+
+            <div class="section-title">
+                <span class="eyebrow">INTERNSHIP ROADMAP</span>
+
+                <h1>
+                    What I'm building
+                </h1>
+
+                <p>
+                    A practical progression from frontend development
+                    to Dockerized deployment.
+                </p>
+            </div>
+
+            <div class="roadmap">
+
+                <div class="roadmap-item complete">
+
+                    <div class="roadmap-number">01</div>
+
+                    <div class="roadmap-content">
+                        <span class="roadmap-status">COMPLETED</span>
+
+                        <h3>Frontend Foundation</h3>
+
+                        <p>
+                            Build the Chatterbox TTS interface using
+                            HTML, CSS and JavaScript.
+                        </p>
+
+                        <div class="tech-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-check">✓</div>
+
+                </div>
+
+
+                <div class="roadmap-item complete">
+
+                    <div class="roadmap-number">02</div>
+
+                    <div class="roadmap-content">
+                        <span class="roadmap-status">COMPLETED</span>
+
+                        <h3>Docker Image</h3>
+
+                        <p>
+                            Package the static frontend inside an
+                            Nginx-based Docker image.
+                        </p>
+
+                        <div class="tech-tags">
+                            <span>Dockerfile</span>
+                            <span>Nginx</span>
+                            <span>Alpine</span>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-check">✓</div>
+
+                </div>
+
+
+                <div class="roadmap-item complete">
+
+                    <div class="roadmap-number">03</div>
+
+                    <div class="roadmap-content">
+                        <span class="roadmap-status">COMPLETED</span>
+
+                        <h3>Container Runtime</h3>
+
+                        <p>
+                            Run the image as a container and expose
+                            the frontend through localhost.
+                        </p>
+
+                        <div class="tech-tags">
+                            <span>docker run</span>
+                            <span>Port Mapping</span>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-check">✓</div>
+
+                </div>
+
+
+                <div class="roadmap-item">
+
+                    <div class="roadmap-number">04</div>
+
+                    <div class="roadmap-content">
+                        <span class="roadmap-status pending">NEXT</span>
+
+                        <h3>Chatterbox Backend</h3>
+
+                        <p>
+                            Connect the frontend to a real Text-to-Speech
+                            backend and generate audio.
+                        </p>
+
+                        <div class="tech-tags">
+                            <span>API</span>
+                            <span>Python</span>
+                            <span>Chatterbox TTS</span>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-check pending">→</div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Docker -->
+        <section class="page-section" id="docker">
+
+            <div class="section-title">
+                <span class="eyebrow">CONTAINER ENVIRONMENT</span>
+
+                <h1>
+                    Docker Status
+                </h1>
+
+                <p>
+                    Frontend container configuration and runtime information.
+                </p>
+            </div>
+
+
+            <div class="docker-dashboard">
+
+                <div class="docker-status-card">
+
+                    <div class="big-status">
+                        <span class="big-status-dot"></span>
+
+                        <div>
+                            <span>CONTAINER STATUS</span>
+                            <h2>RUNNING</h2>
+                        </div>
+                    </div>
+
+                    <p>
+                        The frontend is served through Nginx inside
+                        a Docker container.
+                    </p>
+
+                    <div class="container-name">
+                        <span>CONTAINER</span>
+                        <strong>chatterbox-frontend</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="docker-details">
+
+                    <div class="detail-card">
+                        <span>IMAGE</span>
+                        <strong>chatterbox-frontend:latest</strong>
+                    </div>
+
+                    <div class="detail-card">
+                        <span>BASE IMAGE</span>
+                        <strong>nginx:alpine</strong>
+                    </div>
+
+                    <div class="detail-card">
+                        <span>HOST PORT</span>
+                        <strong>3000</strong>
+                    </div>
+
+                    <div class="detail-card">
+                        <span>CONTAINER PORT</span>
+                        <strong>80</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="code-panel">
+
+                <div class="code-header">
+                    <span>Dockerfile</span>
+
+                    <button class="copy-button" data-copy="dockerfile">
+                        Copy
+                    </button>
+                </div>
+
+                <pre id="dockerfile"><code><span class="code-keyword">FROM</span> nginx:alpine
+
+<span class="code-keyword">COPY</span> . /usr/share/nginx/html
+
+<span class="code-keyword">EXPOSE</span> 80</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <!-- Architecture -->
+        <section class="page-section" id="architecture">
+
+            <div class="section-title">
+                <span class="eyebrow">SYSTEM DESIGN</span>
+
+                <h1>
+                    Frontend Architecture
+                </h1>
+
+                <p>
+                    How the current Dockerized application is structured.
+                </p>
+            </div>
+
+
+            <div class="architecture-flow">
+
+                <div class="architecture-node source-node">
+                    <span class="node-icon">⌘</span>
+
+                    <h3>Source Code</h3>
+
+                    <p>HTML · CSS · JS</p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="architecture-node docker-node">
+                    <span class="node-icon">▣</span>
+
+                    <h3>Docker Image</h3>
+
+                    <p>chatterbox-frontend</p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="architecture-node nginx-node">
+                    <span class="node-icon">◇</span>
+
+                    <h3>Nginx</h3>
+
+                    <p>Container :80</p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="architecture-node browser-node">
+                    <span class="node-icon">↗</span>
+
+                    <h3>Browser</h3>
+
+                    <p>localhost:3000</p>
+                </div>
+
+            </div>
+
+
+            <div class="architecture-note">
+
+                <div class="note-icon">i</div>
+
+                <div>
+                    <strong>Current implementation</strong>
+
+                    <p>
+                        This frontend is intentionally backend-free.
+                        The Chatterbox TTS model/API will be integrated
+                        in the next stage.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- Toast -->
+<div class="toast" id="toast">
+    <span>✓</span>
+    <div>
+        <strong>Success</strong>
+        <small>Action completed.</small>
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
